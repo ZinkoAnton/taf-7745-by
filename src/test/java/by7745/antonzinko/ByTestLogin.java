@@ -12,7 +12,7 @@ public class ByTestLogin {
                         header("Content-Type", "application/json").
                         body("{\"login\":\"(1\",\"password\":\"1\"}").
                         when().
-                        post("https://7745.by").
+                        post("https://7745.by/login").
                         then().
                         log().all();
     }
