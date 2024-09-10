@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class ByTestSite {
+public class ByTestLogin {
 
     @Test
     public void testLogin() {
@@ -12,7 +12,7 @@ public class ByTestSite {
                         header("Content-Type", "application/json").
                         body("{\"login\":\"(1\",\"password\":\"1\"}").
                         when().
-                        post("https://7745.by").
+                        post("https://7745.by/login").
                         then().
                         log().all();
     }
