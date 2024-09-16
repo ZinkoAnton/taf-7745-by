@@ -86,6 +86,5 @@ public class ApiTest {
                 post(LOGIN_URL4).
                 then().
                 log().all();
-
     }
 }
