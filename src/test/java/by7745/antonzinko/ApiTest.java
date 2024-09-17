@@ -87,4 +87,4 @@ public class ApiTest {
                 then().
                 log().all();
     }
-
+}
