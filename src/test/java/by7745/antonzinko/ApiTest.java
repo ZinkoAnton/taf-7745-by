@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ApiTest {
-
     @Test
     public void testIncorrectData() {
         String body = "{\"login\":\"\",\"1\"password\":\"\"}";
@@ -59,7 +58,7 @@ public class ApiTest {
     @Test
     public void testEmptyPassword() {
         String body3 = "{\"login\":\"(1\",\"password\":\"\"}";
-        String LOGIN_URL3 ="https://7745.by/login";
+        String LOGIN_URL3 = "https://7745.by/login";
         Map<String, String> headers3 = new HashMap<>();
         headers3.put("Content-Type", "application/json");
         RestAssured.
