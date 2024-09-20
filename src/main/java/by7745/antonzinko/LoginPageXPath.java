@@ -1,6 +1,6 @@
 package by7745.antonzinko;
 
-public class LoginXPath {
+public class LoginPageXPath {
     public static final String INPUT_LOGIN_XPATH = "//div[@class='open-logon open-login']/div[1]/form[1]/div[1]/div[2]/input";
     public static final String INPUT_PASSWORD_XPATH = "//div[@class='open-logon open-login']/div[1]/form[1]/div[2]/input";
     public static final String BUTTON_ENTER_XPATH = "//div[@class='open-logon open-login']/div[1]/form[1]/div[4]/input[2]";
