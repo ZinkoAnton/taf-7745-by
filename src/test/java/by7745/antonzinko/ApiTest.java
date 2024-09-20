@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ApiTest {
+    
     @Test
     public void testIncorrectData() {
         String body = "{\"login\":\"\",\"1\"password\":\"\"}";
