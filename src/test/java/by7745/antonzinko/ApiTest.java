@@ -6,7 +6,19 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+import static io.restassured.RestAssured.given;
+
 public class ApiTest {
+
+    @Test
+    public void testFormData() {
+        given().
+                formParam("prefix", "375").
+                header("Content-Type", "multipart/form-data").
+                when().
+                post("https://7745.by/login").
+                then().log().all();
+    }
 
     @Test
     public void testIncorrectData() {
@@ -14,8 +26,7 @@ public class ApiTest {
         String LOGIN_URL = "https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
-        RestAssured.
-                given().
+        given().
                 headers(headers).
                 body(body).
                 when().
@@ -30,8 +41,7 @@ public class ApiTest {
         String LOGIN_URL1 = "https://7745.by/login";
         Map<String, String> headers1 = new HashMap<>();
         headers1.put("Content-Type", "application/json");
-        RestAssured.
-                given().
+        given().
                 headers(headers1).
                 body(body1).
                 when().
@@ -46,8 +56,7 @@ public class ApiTest {
         String LOGIN_URL2 = "https://7745.by/login";
         Map<String, String> headers2 = new HashMap<>();
         headers2.put("Content-Type", "application/json");
-        RestAssured.
-                given().
+        given().
                 headers(headers2).
                 body(body2).
                 when().
@@ -62,8 +71,7 @@ public class ApiTest {
         String LOGIN_URL3 ="https://7745.by/login";
         Map<String, String> headers3 = new HashMap<>();
         headers3.put("Content-Type", "application/json");
-        RestAssured.
-                given().
+        given().
                 headers(headers3).
                 body(body3).
                 when().
@@ -78,8 +86,7 @@ public class ApiTest {
         String LOGIN_URL4 = "https://7745.by/login";
         Map<String, String> headers4 = new HashMap<>();
         headers4.put("Content-Type", "application/json");
-        RestAssured.
-                given().
+        given().
                 headers(headers4).
                 body(body4).
                 when().

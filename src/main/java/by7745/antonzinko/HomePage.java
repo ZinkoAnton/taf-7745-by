@@ -16,5 +16,4 @@ public class HomePage {
         WebElement iconLogin = driver.findElement(iconLoginBy);
         iconLogin.click();
     }
-
 }

@@ -28,5 +28,11 @@ public class LoginPage {
         WebElement inputPassword = driver.findElement(inputPasswordBy);
         inputPassword.sendKeys(password);
     }
+
+    public String getLoginPageHeaderText() {
+        WebElement loginPageHeaderText = driver.findElement(By.xpath(LoginPageText.LOGIN_PAGE_HEADER_PATH));
+        String actual = loginPageHeaderText.getText();
+        return actual;
+    }
 }
 

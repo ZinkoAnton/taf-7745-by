@@ -1,5 +1,6 @@
 package by7745.antonzinko;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,5 +20,8 @@ public class LoginTest {
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickButtonEnter();
+
+        String actual = loginPage.getLoginPageHeaderText();
+        Assertions.assertEquals(LoginPageText.LOGIN_PAGE_HEADER_TEXT, actual);
     }
 }
