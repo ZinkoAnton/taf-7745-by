@@ -17,7 +17,7 @@ public class ApiTest {
         String formParam = "prefix, 375";
         String LOGIN_URL = "https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
-        headers.put("Content-Type", "multipart/form-data");
+        headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
                 config(RestAssured.config().
                         encoderConfig(encoderConfig().
@@ -27,5 +27,40 @@ public class ApiTest {
                 when().
                 post(LOGIN_URL).
                 then().log().all();
+    }
+
+    @Test
+    public void testLogin() {
+        String formParam = "prefix, 375";
+        String LOGIN_URL = "https://7745.by/login";
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
+        given().
+                config(RestAssured.config().
+                        encoderConfig(encoderConfig().
+                                encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
+                formParam(formParam).
+                headers(headers).
+                when().
+                post(LOGIN_URL).
+                then().log().all();
+    }
+
+    @Test
+    public void testIncorrectData() {
+        String body = "prefix, 375";
+        String LOGIN_URL = "https://7745.by/login";
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
+        given().
+                config(RestAssured.config().
+                        encoderConfig(encoderConfig().
+                                encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
+                headers(headers).
+                body(body).
+                when().
+                post(LOGIN_URL).
+                then().
+                log().all();
     }
 }
