@@ -71,6 +71,9 @@ public class ApiTest {
         Map<String, String> headers1 = new HashMap<>();
         headers1.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
+                config(RestAssured.config().
+                        encoderConfig(encoderConfig().
+                                encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
                 headers(headers1).
                 body(body1).
                 when().
@@ -86,6 +89,9 @@ public class ApiTest {
         Map<String, String> headers2 = new HashMap<>();
         headers2.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
+                config(RestAssured.config().
+                        encoderConfig(encoderConfig().
+                                encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
                 headers(headers2).
                 body(body2).
                 when().
@@ -101,6 +107,9 @@ public class ApiTest {
         Map<String, String> headers3 = new HashMap<>();
         headers3.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
+                config(RestAssured.config().
+                        encoderConfig(encoderConfig().
+                                encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
                 headers(headers3).
                 body(body3).
                 when().
