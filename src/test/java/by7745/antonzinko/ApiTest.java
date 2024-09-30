@@ -15,7 +15,7 @@ public class ApiTest {
     @Test
     public void testFormData() {
         String formParam = "prefix, 375";
-        String LOGIN_URL = "https://7745.by/login";
+        final String LOGIN_URL = "https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -32,7 +32,7 @@ public class ApiTest {
     @Test
     public void testLogin() {
         String formParam = "prefix, 375";
-        String LOGIN_URL = "https://7745.by/login";
+        final String LOGIN_URL = "https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -49,7 +49,7 @@ public class ApiTest {
     @Test
     public void testIncorrectData() {
         String formParam = "prefix, 375";
-        String LOGIN_URL = "https://7745.by/login";
+        final String LOGIN_URL = "https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -67,7 +67,7 @@ public class ApiTest {
     @Test
     public void testEmptyData() {
         String formParam = "prefix, 375";
-        String LOGIN_URL = "https://7745.by/login";
+        final String LOGIN_URL = "https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -85,7 +85,7 @@ public class ApiTest {
     @Test
     public void testEmptyLogin() {
         String formParam = "prefix, 375";
-        String LOGIN_URL = "https://7745.by/login";
+        final String LOGIN_URL = "https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -103,7 +103,7 @@ public class ApiTest {
     @Test
     public void testEmptyPassword() {
         String formParam = "prefix, 375";
-        String LOGIN_URL ="https://7745.by/login";
+        final String LOGIN_URL ="https://7745.by/login";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
