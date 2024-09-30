@@ -50,6 +50,7 @@ public class ApiTest {
     public void testIncorrectData() {
         String formParam = "prefix, 375";
         final String LOGIN_URL = "https://7745.by/login";
+        String body = "{\"login\":\"\",\"1\"password\":\"\"}";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -58,6 +59,7 @@ public class ApiTest {
                                 encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
                 formParam(formParam).
                 headers(headers).
+                body(body).
                 when().
                 post(LOGIN_URL).
                 then().
@@ -68,6 +70,7 @@ public class ApiTest {
     public void testEmptyData() {
         String formParam = "prefix, 375";
         final String LOGIN_URL = "https://7745.by/login";
+        String body = "{\"login\":\"\",\"password\":\"\"}";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -76,6 +79,7 @@ public class ApiTest {
                                 encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
                 formParam(formParam).
                 headers(headers).
+                body(body).
                 when().
                 post(LOGIN_URL).
                 then().
@@ -86,6 +90,7 @@ public class ApiTest {
     public void testEmptyLogin() {
         String formParam = "prefix, 375";
         final String LOGIN_URL = "https://7745.by/login";
+        String body = "{\"login\":\"\",\"password\":\"1\"}";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -94,6 +99,7 @@ public class ApiTest {
                                 encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
                 formParam(formParam).
                 headers(headers).
+                body(body).
                 when().
                 post(LOGIN_URL).
                 then().
@@ -104,6 +110,7 @@ public class ApiTest {
     public void testEmptyPassword() {
         String formParam = "prefix, 375";
         final String LOGIN_URL ="https://7745.by/login";
+        String body = "{\"login\":\"(1\",\"password\":\"\"}";
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
@@ -112,6 +119,7 @@ public class ApiTest {
                                 encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
                 formParam(formParam).
                 headers(headers).
+                body(body).
                 when().
                 post(LOGIN_URL).
                 then().
