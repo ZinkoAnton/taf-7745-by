@@ -15,13 +15,7 @@ public class ApiTest {
     @Test
     public void testLogin() {
         final String LOGIN_URL = "https://7745.by/login";
-        Map<String, String> headers = new HashMap<>();
-        headers.put("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
         given().
-                config(RestAssured.config().
-                        encoderConfig(encoderConfig().
-                                encodeContentTypeAs("multipart/form-data", ContentType.TEXT))).
-                headers(headers).
                 when().
                 post(LOGIN_URL).
                 then().
