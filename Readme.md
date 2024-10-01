@@ -2,7 +2,7 @@
 ## **Тестовый автоматезированный фреймворк сайта 7745.by** (https://7745.by/)
 # Антон Жинко
 в ходе  которого было проведено его автоматизированное тестирование:
-* UI-тесты и API-тесты формы логина
+* UI-тест и API-тест формы логина
 * тестовый фреймворк состоит из файлов HomePage, HomePageXPath, LoginPage, LoginPageXPath, LoginPageText, LoginTest и ApiTest.
 * использовались библиотеки JUnit, Selenium WebDriver и RestAssured.
 ### *Мои контакты:* ###
