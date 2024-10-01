@@ -18,5 +18,7 @@ public class InputSearchTest {
         HomePage homePage = new HomePage(driver);
         homePage.dialInputSearchAndClickButton();
 
+        String actual = homePage.getLaptopsPageHeaderText();
+        Assertions.assertEquals(LaptopsPageText.LAPTOPS_PAGE_HEADER_TEXT, actual);
     }
 }

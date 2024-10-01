@@ -23,4 +23,10 @@ public class HomePage {
         WebElement inputSearch = driver.findElement(inputSearchBy);
         inputSearch.sendKeys("Ноутбуки", Keys.ENTER);
     }
+
+    public String getLaptopsPageHeaderText() {
+        WebElement loginPageHeaderText = driver.findElement(By.xpath(LaptopsPageText.LAPTOPS_PAGE_HEADER_PATH));
+        String actual = loginPageHeaderText.getText();
+        return actual;
+    }
 }
