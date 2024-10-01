@@ -17,13 +17,13 @@ public class LoginPage {
         buttonEnter.click();
     }
 
-    public void inputLogin(String email) {
+    public void dialInputLogin(String email) {
         By inputLoginBy = By.xpath(LoginPageXPath.INPUT_LOGIN_XPATH);
         WebElement inputLogin = driver.findElement(inputLoginBy);
         inputLogin.sendKeys(email);
     }
 
-    public void inputPassword(String password) {
+    public void dialInputPassword(String password) {
         By inputPasswordBy = By.xpath(LoginPageXPath.INPUT_PASSWORD_XPATH);
         WebElement inputPassword = driver.findElement(inputPasswordBy);
         inputPassword.sendKeys(password);
