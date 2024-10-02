@@ -1,4 +1,4 @@
-package by7745.antonzinko;
+package by7745.antonzinko.api;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

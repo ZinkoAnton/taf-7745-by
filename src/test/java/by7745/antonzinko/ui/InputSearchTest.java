@@ -1,11 +1,13 @@
-package by7745.antonzinko;
+package by7745.antonzinko.ui;
 
+import by7745.antonzinko.HomePage;
+import by7745.antonzinko.LaptopsPageText;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginTest {
+public class InputSearchTest {
     WebDriver driver;
     final String BASE_URL = "https://7745.by/";
 
@@ -16,12 +18,9 @@ public class LoginTest {
         driver.get(BASE_URL);
 
         HomePage homePage = new HomePage(driver);
-        homePage.clickIconLogin();
+        homePage.dialInputSearchAndClickButton();
 
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.clickButtonEnter();
-
-        String actual = loginPage.getLoginPageHeaderText();
-        Assertions.assertEquals(LoginPageText.LOGIN_PAGE_HEADER_TEXT, actual);
+        String actual = homePage.getLaptopsPageHeaderText();
+        Assertions.assertEquals(LaptopsPageText.LAPTOPS_PAGE_HEADER_TEXT, actual);
     }
 }
