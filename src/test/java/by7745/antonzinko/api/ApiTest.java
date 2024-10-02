@@ -31,6 +31,7 @@ public class ApiTest {
                 when().
                 post(LOGIN_URL).
                 then().
+                statusCode(200).
                 log().all();
     }
 
@@ -41,6 +42,7 @@ public class ApiTest {
                 when().
                 post(LOGIN_URL).
                 then().
+                statusCode(302).
                 log().all();
     }
 
@@ -63,6 +65,7 @@ public class ApiTest {
                 when().
                 post(LOGIN_URL).
                 then().
+                statusCode(200).
                 log().all();
     }
 
@@ -85,6 +88,7 @@ public class ApiTest {
                 when().
                 post(LOGIN_URL).
                 then().
+                statusCode(200).
                 log().all();
     }
 
@@ -107,6 +111,7 @@ public class ApiTest {
                 when().
                 post(LOGIN_URL).
                 then().
+                statusCode(200).
                 log().all();
     }
 
@@ -129,6 +134,7 @@ public class ApiTest {
                 when().
                 post(LOGIN_URL).
                 then().
+                statusCode(200).
                 log().all();
     }
 }

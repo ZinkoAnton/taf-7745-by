@@ -13,7 +13,7 @@ public class LoginTest {
     final String BASE_URL = "https://7745.by/";
 
     @Test
-    public void testLoginWithEmptyData() {
+    public void openDriver() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BASE_URL);
