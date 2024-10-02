@@ -9,6 +9,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
+import static org.hamcrest.Matchers.equalTo;
 
 public class ApiTest {
 
@@ -32,6 +33,10 @@ public class ApiTest {
                 post(LOGIN_URL).
                 then().
                 statusCode(200).
+                body("success", equalTo(false)).
+                body("message", equalTo("The field is required. (and 1 more error)")).
+                body("errors.email[0]", equalTo("The field is required.")).
+                body("errors.password[0]", equalTo("The field is required.")).
                 log().all();
     }
 

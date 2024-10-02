@@ -4,33 +4,33 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPage {
+public class LoginForm {
     WebDriver driver;
 
-    public LoginPage(WebDriver driver) {
+    public LoginForm(WebDriver driver) {
         this.driver = driver;
     }
 
     public void clickButtonEnter() {
-        By buttonEnterBy = By.xpath(LoginPageXPath.BUTTON_ENTER_XPATH);
+        By buttonEnterBy = By.xpath(LoginFormXPath.BUTTON_ENTER_XPATH);
         WebElement buttonEnter = driver.findElement(buttonEnterBy);
         buttonEnter.click();
     }
 
     public void dialInputLogin(String email) {
-        By inputLoginBy = By.xpath(LoginPageXPath.INPUT_LOGIN_XPATH);
+        By inputLoginBy = By.xpath(LoginFormXPath.INPUT_LOGIN_XPATH);
         WebElement inputLogin = driver.findElement(inputLoginBy);
         inputLogin.sendKeys(email);
     }
 
     public void dialInputPassword(String password) {
-        By inputPasswordBy = By.xpath(LoginPageXPath.INPUT_PASSWORD_XPATH);
+        By inputPasswordBy = By.xpath(LoginFormXPath.INPUT_PASSWORD_XPATH);
         WebElement inputPassword = driver.findElement(inputPasswordBy);
         inputPassword.sendKeys(password);
     }
 
     public String getLoginPageHeaderText() {
-        WebElement loginPageHeaderText = driver.findElement(By.xpath(LoginPageText.LOGIN_PAGE_HEADER_PATH));
+        WebElement loginPageHeaderText = driver.findElement(By.xpath(LoginFormText.LOGIN_PAGE_HEADER_PATH));
         String actual = loginPageHeaderText.getText();
         return actual;
     }

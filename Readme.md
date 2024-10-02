@@ -4,7 +4,7 @@
 в данном проекте было проведено автоматизированное тестирование:
 * UI-тест и API-тест формы логина
 * UI-тест поиска
-* тестовый фреймворк состоит из файлов HomePage, HomePageXPath, LoginPage, LoginPageXPath, LoginPageText, LoginTest и ApiTest.
+* тестовый фреймворк состоит из файлов HomePage, HomePageXPath, LoginForm, LoginFormXPath, LoginFormText, LoginTest и ApiTest.
 * использовались библиотеки JUnit, Selenium WebDriver и RestAssured.
 ### *Мои контакты:* ###
 * email: zhinko.toni@inbox.ru

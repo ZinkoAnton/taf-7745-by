@@ -1,8 +1,8 @@
 package by7745.antonzinko.ui;
 
 import by7745.antonzinko.HomePage;
-import by7745.antonzinko.LoginPage;
-import by7745.antonzinko.LoginPageText;
+import by7745.antonzinko.LoginForm;
+import by7745.antonzinko.LoginFormText;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -21,10 +21,10 @@ public class LoginTest {
         HomePage homePage = new HomePage(driver);
         homePage.clickIconLogin();
 
-        LoginPage loginPage = new LoginPage(driver);
+        LoginForm loginPage = new LoginForm(driver);
         loginPage.clickButtonEnter();
 
         String actual = loginPage.getLoginPageHeaderText();
-        Assertions.assertEquals(LoginPageText.LOGIN_PAGE_HEADER_TEXT, actual);
+        Assertions.assertEquals(LoginFormText.LOGIN_PAGE_HEADER_TEXT, actual);
     }
 }
