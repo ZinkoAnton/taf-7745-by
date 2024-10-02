@@ -1,4 +1,4 @@
-package by7745.antonzinko;
+package by7745.antonzinko.form;
 
 public class LoginFormXPath {
     public static final String INPUT_LOGIN_XPATH = "//div[@class='open-logon open-login']/div[1]/form[1]/div[1]/div[2]/input";

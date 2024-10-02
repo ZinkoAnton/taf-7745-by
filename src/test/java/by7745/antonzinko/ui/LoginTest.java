@@ -1,8 +1,8 @@
 package by7745.antonzinko.ui;
 
 import by7745.antonzinko.pages.HomePage;
-import by7745.antonzinko.LoginForm;
-import by7745.antonzinko.LoginFormText;
+import by7745.antonzinko.form.LoginForm;
+import by7745.antonzinko.form.LoginFormText;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
