@@ -1,6 +1,6 @@
 package by7745.antonzinko.ui;
 
-import by7745.antonzinko.HomePage;
+import by7745.antonzinko.pages.HomePage;
 import by7745.antonzinko.LoginForm;
 import by7745.antonzinko.LoginFormText;
 import org.junit.jupiter.api.Assertions;

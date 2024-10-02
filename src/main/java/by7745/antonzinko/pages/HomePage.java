@@ -1,4 +1,4 @@
-package by7745.antonzinko;
+package by7745.antonzinko.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

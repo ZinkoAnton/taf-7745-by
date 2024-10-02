@@ -1,7 +1,7 @@
 package by7745.antonzinko.ui;
 
-import by7745.antonzinko.HomePage;
-import by7745.antonzinko.LaptopsPageText;
+import by7745.antonzinko.pages.HomePage;
+import by7745.antonzinko.pages.LaptopsPageText;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
